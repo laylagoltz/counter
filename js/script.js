@@ -21,6 +21,9 @@ const loop = setInterval(() => {
     if (pipePosition <= 120 && marioPosition < 110 && pipePosition > 0) {
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosition}px`;
+        document.querySelector('.game-over').style.display = 'block';
+
+
     }
 
 

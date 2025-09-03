@@ -11,6 +11,7 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    background-color: rgb(159, 208, 236);
 }
 
 .pipe {
@@ -28,6 +29,49 @@
 
 .jump {
     animation: jump 500ms ease-out;
+}.game-over {
+    display: none;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: red;
+    text-shadow: 3px 3px 10px black;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.game-over h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+}
+
+.game-over p {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.game-over button {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: black;
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.game-over button:hover {
+    background-color: red;
+    color: white;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translate(-50%, -60%); }
+    to { opacity: 1; transform: translate(-50%, -50%); }
 }
 
 @keyframes pipe-animation {
@@ -47,18 +91,19 @@
     }
 
     40% {
-        bottom: 180px;
+        bottom: 200px;
     }
 
     50% {
-        bottom: 180px;
-    }
+        bottom: 200px;
+    } 
 
     60% {
-        bottom: 180px;
+        bottom: 200px;
     }
 
     100% {
         bottom: 0;
     }
 }
+
